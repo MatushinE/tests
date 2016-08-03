@@ -34,15 +34,15 @@ public class TestCost {
   }
   @Test
   public void testCost() throws Exception {
-	//открытие главной страницы    
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ    
     driver.get("http://www.nskes.ru/");
-    //поиск кнопки "Юридически лицам" и установка этого значения в переменную элемент
+    //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //    WebElement element = driver.findElement(By.xpath("//div[@id='pagewrapper']/div[2]/div[3]/div/ul/li[3]/span/a/span"));
     WebElement element = driver.findElement(By.xpath("//div[@id='pagewrapper']/div[2]/div[3]/div/ul/li[3]"));
-    //наводим курсор мышки на кнопу "Юридическии лицам" и ждем
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" пїЅ пїЅпїЅпїЅпїЅ
   
   //  WebDriverWait wait = new WebDriverWait(driver, 1);
-   // wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Ценовой калькулятор")));
+   // wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Р¦РµРЅРµРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")));
     
    Actions actions = new Actions(driver);
  actions.moveToElement(element).build().perform();
@@ -50,38 +50,38 @@ public class TestCost {
   //actions.moveToElement(element).build();
   //Thread.sleep(5);
   //actions.perform();
-  //actions.moveToElement(element).click(driver.findElement(By.linkText("Ценовой калькулятор")));
+  //actions.moveToElement(element).click(driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")));
   //  actions.moveToElement(element);
   //  actions.perform();
-  this.sleep(3);
+  this.sleep(1);
  
-  driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
   
   
   /* 
-    if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==true)
+    if (driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")).isDisplayed()==true)
     {
-    	driver.findElement(By.linkText("Ценовой калькулятор")).click();
+    	driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")).click();
     }
-    else if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==false)
+    else if (driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")).isDisplayed()==false)
     {
         Thread.sleep(5000);
-        driver.findElement(By.linkText("Ценовой калькулятор")).click();
+        driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")).click();
     }
  */  
                //    Action mouseoverAndClick = actions.build();
                  //   mouseoverAndClick.perform();
     // actions.moveToElement(element).perform();
-    //проверяем появление раздела "Ценовой калькулято"
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
     //new WebDriverWait(driver, 10).
     //actions.perform();
     //this.sleep(2);
-    //(driver.findElement(By.linkText("Ценовой калькулятор")));
-    //driver.findElement(By.linkText("Ценовой калькулятор")).click();
+    //(driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")));
+    //driver.findElement(By.linkText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")).click();
     new Select(driver.findElement(By.name("year"))).selectByVisibleText("2016");
-    new Select(driver.findElement(By.name("month"))).selectByVisibleText("Июнь");
-    new Select(driver.findElement(By.id("napr"))).selectByVisibleText("Низкое напряжение (0.4 КВ и ниже)");
-    new Select(driver.findElement(By.id("diap"))).selectByVisibleText("150 кВт - 670 кВт");
+    new Select(driver.findElement(By.name("month"))).selectByVisibleText("РСЋРЅСЊ");
+    new Select(driver.findElement(By.id("napr"))).selectByVisibleText("РќРёР·РєРѕРµ РЅР°РїСЂСЏР¶РµРЅРёРµ (0.4 РљР’ Рё РЅРёР¶Рµ)");
+    new Select(driver.findElement(By.id("diap"))).selectByVisibleText("РјРµРЅРµРµ 150 РєР’С‚");
     driver.findElement(By.name("obemE")).clear();
     driver.findElement(By.name("obemE")).sendKeys("10");
     driver.findElement(By.name("submit")).click();
