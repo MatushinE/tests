@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestCost
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.822 sec - in TestCost
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.702 sec <<< FAILURE! - in TestCost
+testCost(TestCost)  Time elapsed: 9.653 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Unable to find element with link text == Ценовой калькулятор (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 713 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'HomeServer', ip: '192.168.2.100', os.name: 'Windows Server 2008 R2', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, pageLoadStrategy=normal, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=true, browserName=internet explorer, initialBrowserUrl=http://localhost:41322/, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 7ce2633e-faa2-49a2-99ed-94b3c551a695
+*** Element info: {Using=link text, value=Ценовой калькулятор}
+	at TestCost.testCost(TestCost.java:52)
+

@@ -47,7 +47,7 @@ public class TestCost {
 
   this.sleep(1);
  
- // driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  //driver.findElement(By.linkText("Ценовой калькулятор")).click();
   
     if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==true)
     {
