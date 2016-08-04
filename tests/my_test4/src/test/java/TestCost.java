@@ -45,25 +45,34 @@ public class TestCost {
     Actions actions = new Actions(driver);
     actions.moveToElement(element).build().perform();
 
-  this.sleep(1);
+  this.sleep(2);
  
-  //driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  //driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
   
-    if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==true)
+  WebDriverWait waitForOne = new WebDriverWait(driver, 10);
+  //waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")));
+  waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Ценовой калькулятор")));
+  //driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
+  driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  /* if (driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).isDisplayed()==true)
     {
-    	driver.findElement(By.linkText("Ценовой калькулятор")).click();
+    	
+    	driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
     }
-    else if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==false)
+    else if (driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).isDisplayed()==false)
     {
-    	this.sleep(2);
-        driver.findElement(By.linkText("Ценовой калькулятор")).click();
+    	this.sleep(20);
+        driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
     }
- 
+ */
     this.sleep(1);
     new Select(driver.findElement(By.name("year"))).selectByVisibleText("2016");
     this.sleep(1);
+    //new Select(driver.findElement(By.name("month"))).selectByVisibleText("Р�СЋРЅСЊ");
     new Select(driver.findElement(By.name("month"))).selectByVisibleText("Июнь");
+  //Низкое напряжение (0.4 КВ и ниже) new Select(driver.findElement(By.id("napr"))).selectByVisibleText("РќРёР·РєРѕРµ РЅР°РїСЂСЏР¶РµРЅРёРµ (0.4 РљР’ Рё РЅРёР¶Рµ)");
     new Select(driver.findElement(By.id("napr"))).selectByVisibleText("Низкое напряжение (0.4 КВ и ниже)");
+    //new Select(driver.findElement(By.id("diap"))).selectByVisibleText("РјРµРЅРµРµ 150 РєР’С‚");
     new Select(driver.findElement(By.id("diap"))).selectByVisibleText("менее 150 кВт");
     driver.findElement(By.name("obemE")).clear();
     this.sleep(1);
