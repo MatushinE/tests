@@ -24,12 +24,14 @@ public class TestCost {
 
   @Before
   public void setUp() throws Exception {
-
+/*
 	  DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 	  caps.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS,true);
 	  driver = new InternetExplorerDriver(caps);
+	
+*/	  
 	  // driver = new InternetExplorerDriver();
-	  // driver = new ChromeDriver();
+	   driver = new ChromeDriver();
 	//   driver = new FirefoxDriver();
           // baseUrl = "http://www.nskes.ru/";
     
@@ -44,35 +46,34 @@ public class TestCost {
   
     Actions actions = new Actions(driver);
     actions.moveToElement(element).build().perform();
-
   this.sleep(2);
- 
-  //driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
-  
-  WebDriverWait waitForOne = new WebDriverWait(driver, 10);
-  //waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")));
+  WebElement element2 = driver.findElement(By.linkText("Ценовой калькулятор"));
+  actions.moveToElement(element2).build().perform();
+  element2.click();
+  //driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  /*
+  WebDriverWait waitForOne = new WebDriverWait(driver, 15);
   waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Ценовой калькулятор")));
-  //driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
-  driver.findElement(By.linkText("Ценовой калькулятор")).click();
-  /* if (driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).isDisplayed()==true)
+*/ 
+  //driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/ul/li[3]/span/div/div/ul[2]/li[1]/ul/li[4]/a")).click();
+  /* if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==true)
     {
     	
-    	driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
-    }
-    else if (driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).isDisplayed()==false)
+    */	
+  //driver.findElement(By.linkText("Ценовой калькулятор")).click();
+  /*  
+  }
+    else if (driver.findElement(By.linkText("Ценовой калькулятор")).isDisplayed()==false)
     {
     	this.sleep(20);
-        driver.findElement(By.linkText("Р¦РµРЅРѕРІРѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ")).click();
+        driver.findElement(By.linkText("Ценовой калькулятор")).click();
     }
  */
     this.sleep(1);
     new Select(driver.findElement(By.name("year"))).selectByVisibleText("2016");
     this.sleep(1);
-    //new Select(driver.findElement(By.name("month"))).selectByVisibleText("Р�СЋРЅСЊ");
     new Select(driver.findElement(By.name("month"))).selectByVisibleText("Июнь");
-  //Низкое напряжение (0.4 КВ и ниже) new Select(driver.findElement(By.id("napr"))).selectByVisibleText("РќРёР·РєРѕРµ РЅР°РїСЂСЏР¶РµРЅРёРµ (0.4 РљР’ Рё РЅРёР¶Рµ)");
     new Select(driver.findElement(By.id("napr"))).selectByVisibleText("Низкое напряжение (0.4 КВ и ниже)");
-    //new Select(driver.findElement(By.id("diap"))).selectByVisibleText("РјРµРЅРµРµ 150 РєР’С‚");
     new Select(driver.findElement(By.id("diap"))).selectByVisibleText("менее 150 кВт");
     driver.findElement(By.name("obemE")).clear();
     this.sleep(1);
