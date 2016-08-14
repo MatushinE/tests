@@ -8,6 +8,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -30,8 +31,9 @@ public class TestCost {
 	  driver = new InternetExplorerDriver(caps);
 	
 */	  
-	  // driver = new InternetExplorerDriver();
-	   driver = new ChromeDriver();
+	   driver = new InternetExplorerDriver();
+	 //  driver = new ChromeDriver();
+	 
 	//   driver = new FirefoxDriver();
           // baseUrl = "http://www.nskes.ru/";
     
