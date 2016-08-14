@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>selenium2</groupId>
-  <artifactId>my_test4</artifactId>
+  <artifactId>testsp1</artifactId>
   <version>1</version>
   <packaging>jar</packaging>
 
