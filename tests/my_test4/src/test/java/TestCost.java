@@ -31,8 +31,8 @@ public class TestCost {
 	  driver = new InternetExplorerDriver(caps);
 	
 */	  
-	   driver = new InternetExplorerDriver();
-	 //  driver = new ChromeDriver();
+	  // driver = new InternetExplorerDriver();
+	   driver = new ChromeDriver();
 	 
 	//   driver = new FirefoxDriver();
           // baseUrl = "http://www.nskes.ru/";
