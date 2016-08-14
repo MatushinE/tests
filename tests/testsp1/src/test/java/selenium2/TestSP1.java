@@ -42,8 +42,8 @@ public class TestSP1 {
 //-------Варианты для удалённого запуска браузера (ничего не мешает использовать  его для локального запуска)
         driver = new RemoteWebDriver(
 	    new URL("http://192.168.2.100:4444/wd/hub"),
-	 //   DesiredCapabilities.firefox());
-	    DesiredCapabilities.internetExplorer());
+	    DesiredCapabilities.firefox());
+	 //   DesiredCapabilities.internetExplorer());
 	 //   DesiredCapabilities.chrome());
 // Устанавливаю логирования (с уровнем детализации INFO)
       ((RemoteWebDriver) driver).setLogLevel(Level.INFO);
@@ -87,10 +87,10 @@ public class TestSP1 {
     log.info("!!!!!!!! TEST FINISH GOOD LOGON !!!!!!!!");
     Thread.sleep(1000);
      }
-//---------Тест элементов управления
+//---------Тест элементов управления 
   @Test
   public void testElement() throws Exception {
-    log.info("!!!!!!!! TEST START ELEMENTS !!!!!!!!");	
+    log.info("!!!!!!!! TEST START ELEMENTS  !!!!!!!!");	
 //открываем тестовую страничку
 	driver.get("http://192.168.2.100/index.html");
 // Тестируем переключатели (радиокнопки), по очереди перебираем каждую
