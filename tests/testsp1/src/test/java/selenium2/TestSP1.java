@@ -57,7 +57,7 @@ public class TestSP1 {
   @Test
   public void testLogon() throws Exception {
 //Добавляем в лог, что Тест авторизации начал выполнение
-    log.info("!!!!!!!! ТЕСТ АВТОРИЗАЦИИ НАЧАЛ ВЫПОЛНЕНИЯ !!!!!!!!");
+    log.info("!!!!!!!! TEST START GOOD LOGON !!!!!!!!");
 //открываем тестовую страничку
     driver.get("http://192.168.2.100/index.html");
 //Находим по имени тега поле для ввода логина и производим его очистку
@@ -76,7 +76,7 @@ public class TestSP1 {
 	  driver.findElement(By.xpath("//div[@id='logon_ok']"));
 //Если элемент не найден, то добавляем информацию об ошибке в лог и завершаем тест как неудачный
     }catch(NoSuchElementException e){ 
-                                    log.info("!!!!!!!! ТЕСТ АВТОРИЗАЦИИ ЗАВЕРШИЛСЯ C НЕПРАВИЛЬНЫМ ЛОГИНОМ ИЛИ ПАРОЛЕМ !!! " 
+                                    log.info("!!!!!!!! TEST FINISH BAD LOGON !!! " 
                                     + e.toString() + " !!!!!!!!");
 //Небольшая задержка, что бы успеть увидить в момент тестирования результат в консоле 	  
 	                                Thread.sleep(1000);
@@ -84,13 +84,13 @@ public class TestSP1 {
 	                                return;
 	   }
 //Если элемент нашелся то заносим в лог информацию об удачном завершении
-    log.info("!!!!!!!! ТЕСТ АВТОРИЗАЦИИ ЗАВЕРШИЛСЯ УСПЕШНО !!!!!!!!");
+    log.info("!!!!!!!! TEST FINISH GOOD LOGON !!!!!!!!");
     Thread.sleep(1000);
      }
 //---------Тест элементов управления
   @Test
   public void testElement() throws Exception {
-    log.info("!!!!!!!! ТЕСТ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ НАЧАЛ ВЫПОЛНЕНИЯ !!!!!!!!");	
+    log.info("!!!!!!!! TEST START ELEMENTS !!!!!!!!");	
 //открываем тестовую страничку
 	driver.get("http://192.168.2.100/index.html");
 // Тестируем переключатели (радиокнопки), по очереди перебираем каждую
@@ -112,18 +112,18 @@ public class TestSP1 {
 //Нажимаем на кнопку "Сброс"
     driver.findElement(By.name("reset")).click();
 //Проверяем, что кнопка "Сброс" отработала как надо и элементы вернули первоначальные значения
-    try{
+   try{
 //---поле ввода текста
      assertEquals("Тестовый текст...", driver.findElement(By.id("text")).getText());
 //---и Сheckbox "другая цифра" 
      assertTrue(driver.findElement(By.id("other")).isSelected()) ;
        } catch(Exception e){
-    	                   log.info("!!!!!!!! ТЕСТ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ ЗАВЕРШИЛСЯ НЕУДАЧНО "+e.toString()+ " !!!!!!!!");	
+    	                   log.info("!!!!!!!! TEST FINISH ELEMENTS FAIL " + e.toString()+ " !!!!!!!!");	
 		                   fail();
-		                    return;
+		                   return;
 	  }
     Thread.sleep(1000);
-    log.info("!!!!!!!! ТЕСТ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ ЗАВЕРШИЛСЯ УСПЕШНО !!!!!!!!");	
+    log.info("!!!!!!!! TEST FINISH ELEMENT GOOD !!!!!!!!");	
   }
 //-------Тест для  не успешной авторизации (изменен только пароль)
   @Test
@@ -148,7 +148,7 @@ public class TestSP1 {
 	  driver.findElement(By.xpath("//div[@id='logon_ok']"));
 //Если элемент не найден, то добавляем информацию в лог и завершаем тест как неудачный
     }catch(NoSuchElementException e){ 
-    	                            log.info("!!!!!!!! ТЕСТ АВТОРИЗАЦИИ ЗАВЕРШИЛСЯ C НЕПРАВИЛЬНЫМ ЛОГИНОМ ИЛИ ПАРОЛЕМ !!!" + 
+    	                            log.info("!!!!!!!! TEST FINISH BAD LOGON !!!" + 
                                     e.toString() + " !!!!!!!!");
 //Небольшая задержка, что бы успеть увидить в момент тестирования результат в консоле 	  
 	                                Thread.sleep(1000);
@@ -156,7 +156,7 @@ public class TestSP1 {
 	                                return;
 	  }
 //Если элемент нашелся то заносим в лог информацию об удачном завершении
-    log.info("!!!!!!!! ТЕСТ АВТОРИЗАЦИИ ЗАВЕРШИЛСЯ УСПЕШНО !!!!!!!!");
+    log.info("!!!!!!!! TEST FINISH GOOD LOGON !!!!!!!!");
     Thread.sleep(1000);
      }
 //Закрываем браузер и освобождаем все ресурсы (метод будет вызван после выполнения тестов)
