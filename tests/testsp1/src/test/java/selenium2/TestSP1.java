@@ -98,10 +98,10 @@ public class TestSP1 {
     driver.findElement(By.xpath(".//*[@id='elements']/form/fieldset/input[2]")).click();
     driver.findElement(By.cssSelector("input[value=\"r3\"]")).click();
 // Тестируем Сheckbox
-    driver.findElement(By.id("с1")).click();
-    driver.findElement(By.cssSelector("#с7")).click();
+    driver.findElement(By.id("c1")).click();
+    driver.findElement(By.cssSelector("#c7")).click();
     driver.findElement(By.xpath("//div[@id='elements']/form/fieldset/label[3]/input")).click();
-    driver.findElement(By.xpath("//input[@id='с777']")).click();
+    driver.findElement(By.xpath("//input[@id='c777']")).click();
     driver.findElement(By.xpath("//label[5]/input")).click();
 // Раскрывающейся список
     new Select(driver.findElement(By.name("List"))).selectByVisibleText("Очень понравилось!");
