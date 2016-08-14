@@ -43,8 +43,8 @@ public class TestSP1 {
         driver = new RemoteWebDriver(
 	    new URL("http://192.168.2.100:4444/wd/hub"),
 	  //  DesiredCapabilities.firefox());
-	    DesiredCapabilities.internetExplorer());
-	 //   DesiredCapabilities.chrome());
+	 //   DesiredCapabilities.internetExplorer());
+	    DesiredCapabilities.chrome());
 // Устанавливаю логирования (с уровнем детализации INFO)
       ((RemoteWebDriver) driver).setLogLevel(Level.INFO);
 //Весь вывод сохраняем в файл (можно было бы так же воспользоваться различными фрэймворками например "slf4j" или т.п.) 
