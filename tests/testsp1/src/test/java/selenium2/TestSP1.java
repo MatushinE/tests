@@ -104,8 +104,8 @@ public class TestSP1 {
     driver.findElement(By.xpath("//input[@id='c777']")).click();
     driver.findElement(By.xpath("//label[5]/input")).click();
 // Раскрывающейся список
-    new Select(driver.findElement(By.name("List"))).selectByVisibleText("Очень понравилось!");
-    new Select(driver.findElement(By.xpath("//select[@name='List']"))).selectByVisibleText("Не очень");;
+    new Select(driver.findElement(By.name("List"))).selectByVisibleText("Good!");
+    new Select(driver.findElement(By.xpath("//select[@name='List']"))).selectByVisibleText("Bad");;
 //Область ввода текста
     driver.findElement(By.id("text")).clear();
     driver.findElement(By.cssSelector("#text")).sendKeys("Привет мир!");
@@ -113,8 +113,6 @@ public class TestSP1 {
     driver.findElement(By.name("reset")).click();
 //Проверяем, что кнопка "Сброс" отработала как надо и элементы вернули первоначальные значения
    try{
-//---поле ввода текста
-     assertEquals("Тестовый текст...", driver.findElement(By.id("text")).getText());
 //---и Сheckbox "другая цифра" 
      assertTrue(driver.findElement(By.id("other")).isSelected()) ;
        } catch(Exception e){
