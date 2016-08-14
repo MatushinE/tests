@@ -24,10 +24,10 @@ public class TestSP1 {
   private WebDriver driver;
   private Logger log  =  Logger.getLogger(RemoteWebDriver.class.getName());
 
-  //Начальная предустановка для теста (метод, которыq будут вызван до исполнения теста)
+  //Начальная предустановка для теста (метод, который будет вызван до исполнения теста)
   @Before
   public void setUp() throws Exception {
-//Здесь перечислены варианты подключения (нужный просто надо раскоментировать)
+//Здесь перечислены варианты подключения (нужный просто надо раскомментировать)
 //так же это можно было сделать в mavenе в pom.xml  в виде профилей, но Я подумал здесь будет нагляднее
 //-------Браузер InternetExplore (в моём случае 11 х64) 
     //  driver = new InternetExplorerDriver();
@@ -42,9 +42,9 @@ public class TestSP1 {
 //-------Варианты для удалённого запуска браузера (ничего не мешает использовать  его для локального запуска)
         driver = new RemoteWebDriver(
 	    new URL("http://192.168.2.100:4444/wd/hub"),
-	    DesiredCapabilities.firefox());
+	 //   DesiredCapabilities.firefox());
 	 //   DesiredCapabilities.internetExplorer());
-	 //   DesiredCapabilities.chrome());
+	    DesiredCapabilities.chrome());
 // Устанавливаю логирования (с уровнем детализации INFO)
       ((RemoteWebDriver) driver).setLogLevel(Level.INFO);
 //Весь вывод сохраняем в файл (можно было бы так же воспользоваться различными фрэймворками например "slf4j" или т.п.) 
@@ -78,7 +78,7 @@ public class TestSP1 {
     }catch(NoSuchElementException e){ 
                                     log.info("!!!!!!!! TEST FINISH BAD LOGON !!! " 
                                     + e.toString() + " !!!!!!!!");
-//Небольшая задержка, что бы успеть увидить в момент тестирования результат в консоле 	  
+//Небольшая задержка, что бы успеть увидеть в момент тестирования результат в консоли 	  
 	                                Thread.sleep(1000);
 	                                fail();
 	                                return;
@@ -150,7 +150,7 @@ public class TestSP1 {
     }catch(NoSuchElementException e){ 
     	                            log.info("!!!!!!!! TEST FINISH BAD LOGON !!!" + 
                                     e.toString() + " !!!!!!!!");
-//Небольшая задержка, что бы успеть увидить в момент тестирования результат в консоле 	  
+//Небольшая задержка, что бы успеть увидеть в момент тестирования результат в консоли 	  
 	                                Thread.sleep(1000);
 	                                fail();
 	                                return;
