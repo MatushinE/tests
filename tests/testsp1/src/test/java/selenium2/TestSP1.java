@@ -42,8 +42,8 @@ public class TestSP1 {
 //-------Варианты для удалённого запуска браузера (ничего не мешает использовать  его для локального запуска)
         driver = new RemoteWebDriver(
 	    new URL("http://192.168.2.100:4444/wd/hub"),
-	    DesiredCapabilities.firefox());
-	 //   DesiredCapabilities.internetExplorer());
+	  //  DesiredCapabilities.firefox());
+	    DesiredCapabilities.internetExplorer());
 	 //   DesiredCapabilities.chrome());
 // Устанавливаю логирования (с уровнем детализации INFO)
       ((RemoteWebDriver) driver).setLogLevel(Level.INFO);
